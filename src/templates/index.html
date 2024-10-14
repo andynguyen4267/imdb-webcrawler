@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb Scraper</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>IMDb Scraper</h1>
+    <form id="scraperForm">
+        <label for="top">Number of Top Movies:</label>
+        <input type="number" id="top" name="top" value="10"><br><br>
+
+        <label for="plot">Plot Type:</label>
+        <select id="plot" name="plot">
+            <option value="bar">Bar</option>
+            <option value="hist">Histogram</option>
+            <option value="pie">Pie</option>
+        </select><br><br>
+
+        <label for="export">Export Format:</label>
+        <select id="export" name="export">
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+            <option value="excel">Excel</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <img id="chart" alt="Chart will appear here">
+    <div id="download-link"></div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
